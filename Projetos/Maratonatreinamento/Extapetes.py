@@ -1,0 +1,5 @@
+lista= input()
+lista = lista.split(" ")
+n1= int(lista[0])-(int(lista[1])-1)
+soma= (n1**2)+(int(lista[1])-1)
+print(soma)
