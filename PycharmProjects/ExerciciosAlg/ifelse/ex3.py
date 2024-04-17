@@ -1,0 +1,30 @@
+#Escreva um algoritmo que lê quatro valores inteiros e os imprime em ordem decrescente.
+x = int(input('Digite um numero: '))
+y = int(input('Digite outro numero: '))
+z = int(input('Digite mais um numero: '))
+w = int(input('Digite mais um numero: '))
+if x<=y:
+    aux= x
+    x = y
+    y = aux
+if x<=z:
+    aux = x
+    x = z
+    z = aux
+if x<=w:
+    aux = x
+    x = w
+    w = aux
+if y<=z:
+    aux = y
+    y = z
+    z = aux
+if y<=w:
+    aux = y
+    y = w
+    w = aux
+if z<=w:
+    aux = z
+    z = w
+    w = aux
+print(x,y,z,w)
