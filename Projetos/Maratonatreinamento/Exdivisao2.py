@@ -1,5 +1,5 @@
 i=int(input())
-while(i>0):
+while (i > 0):
     (a,b)=input().split(" ")
     a=int(a)
     b=int(b)
