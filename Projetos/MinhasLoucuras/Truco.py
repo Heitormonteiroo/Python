@@ -120,4 +120,4 @@ if placar1>placar2:
     print("Voce ganhou o jogo, o placar foi de {} a {}".format(placar1,placar2))
 else:
     print("Voce perdeu o jogo, o placar foi de {} a {}".format(placar2,placar1))
-#Resolver o negocio do jogo acabar errado colocar pra trucar
+#Colocar pra trucar
