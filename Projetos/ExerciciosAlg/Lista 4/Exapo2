@@ -1,0 +1,51 @@
+def ordenar(a):
+    i=0
+    while i<len(a):
+        n=a[i]
+        i2=i+1
+        while i2<len(a):
+            if n>a[i2]:
+                aux=n
+                n=a[i2]
+                a[i2]=aux
+            i2+=1
+        a[i]=n
+        i+=1
+    return a
+lista1=input().split()
+lista2=input().split()
+listainteiros1=[]
+listainteiros2=[]
+i=0
+valores=[]
+resposta=""
+while i<len(lista1):
+    listainteiros1.append(int(lista1[i]))
+    i+=1
+i=0
+while i<len(lista2):
+    listainteiros2.append(int(lista2[i]))
+    i+=1
+lista1ordenada=ordenar(listainteiros1)
+lista2ordenada=ordenar(listainteiros2)
+i=0
+if len(lista1ordenada)>len(lista2ordenada):
+    while i<len(lista1ordenada):
+        if lista1ordenada[i] in lista2ordenada:
+            if lista1ordenada[i] not in valores:
+                valores.append(lista1ordenada[i])
+        i+=1
+if len(lista1ordenada)<=len(lista2ordenada):
+    while i<len(lista2ordenada):
+        if lista2ordenada[i] in lista1ordenada:
+            if lista2ordenada[i] not in valores:
+                valores.append(lista2ordenada[i])
+        i+=1
+i=0
+while i<len(valores):
+    if i !=0:
+        resposta=resposta+" "+str(valores[i])
+    else:
+        resposta=str(valores[i])
+    i+=1
+print(resposta)
